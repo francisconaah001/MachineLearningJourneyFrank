@@ -1,0 +1,12 @@
+#import all necessary libraries
+import pandas as pd
+import numpy as np
+
+#load the data to be cleaned
+from google.colab import files
+uploaded = files.upload()
+
+import pandas as pd
+import io
+df=pd.read_excel(io.BytesIO(uploaded['Brains_Head (3).xlsx']), header=1)
+df
