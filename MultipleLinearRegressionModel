@@ -45,6 +45,7 @@ plt.scatter(x_test,y_test,color='red')
 plt.xlabel("actual")
 plt.ylabel("predicted")
 plt.legend()
+plt.legend()
 plt.title("actual vs.predicted")
 
 #Predicted values
