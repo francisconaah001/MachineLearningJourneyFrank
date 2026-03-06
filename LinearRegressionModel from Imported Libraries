@@ -32,3 +32,7 @@ plt.scatter(x_train,y_train, color="black", label= "dot")
 plt.plot(x_test,y_pred, color ="red", label="RegressionLine")
 plt.grid(True, alpha =0.1)
 plt.legend()
+
+#Predicted values
+predicted_values = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred, 'Difference':y_test-y_pred})
+print(predicted_values)
