@@ -14,15 +14,18 @@ print(df)
 df = df.drop("DO", axis =1, errors='ignore')
 print(df)
 
+#define x and y set
 x=df.drop("T.COLOR", axis =1).values
 print(x)
 
 y=df["T.COLOR"].values
 print(y)
 
+#Split the dataset into training and testing set
 from sklearn.model_selection import train_test_split
 x_train,y_train,x_test,y_test=train_test_split(x,y,test_size=0.2,random_state=0)
 
+#Train the model on the training set
 from sklearn.linear_model import LinearRegression
 ml=LinearRegression()
 ml.fit(x_train,y_train)
